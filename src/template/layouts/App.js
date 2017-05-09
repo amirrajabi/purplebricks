@@ -14,7 +14,9 @@ class App extends Component {
 
                 <NavBar/>
 
-                <SecureNegotiationCenterPage/>
+                <div className="container">
+                    <SecureNegotiationCenterPage/>
+                </div>
 
                 <Footer/>
 
