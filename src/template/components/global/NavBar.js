@@ -1,30 +1,34 @@
 /**
  * Created by Amir on 8/5/17.
  */
-import React, {PropTypes} from 'react';
+import React from 'react';
+import Image from '../common/assets/Image';
+import Header1 from '../common/typography/Header-1';
+import Logo from '../../../assets/images/logo.jpg';
 
-const NavBar = ({logo, title}) => {
+const NavBar = () => {
     return (
         <nav className="navbar navbar-default">
             <div className="container">
                 <div className="navbar-header">
                     <div className="row">
                         <div className="col-sm-6">
-                            <img alt="Brand" src={logo}/>
+
+                            <Image url={Logo}
+                                   alt="Brand Logo"/>
+
                         </div>
                         <div className="col-sm-6">
-                            <h1 className="navbar-right typography--purple">{title}</h1>
+
+                            <Header1 className="navbar-right typography--purple"
+                                     text="Secure negotiation centre"/>
+
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
     );
-};
-
-NavBar.propTypes = {
-    logo: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
 };
 
 export default NavBar;
