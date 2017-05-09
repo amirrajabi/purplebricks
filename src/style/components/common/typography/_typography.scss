@@ -1,0 +1,67 @@
+$copy: "typography";
+
+.#{$copy} {
+
+  &--h1{
+
+  }
+
+  &--h2{
+
+  }
+
+  &--h3{
+
+  }
+
+  &--copy-lg{
+
+  }
+
+  &--copy-md{
+
+  }
+
+  &--copy-sm{
+
+  }
+
+  &--white{
+
+  }
+
+  &--purple{
+    color: config('color', 'purple');
+  }
+
+  &--purple-light{
+    color: config('color', 'purple-light');
+  }
+
+  &--red{
+    color: config('color', 'red');
+  }
+
+  &--light{
+
+  }
+
+  &--regular{
+
+  }
+
+  &--bold{
+
+  }
+
+}
+
+h1,
+h2,
+h3{
+  font-family: config('family', 'heading');
+}
+
+p{
+  font-family: config('family', 'copy');
+}
