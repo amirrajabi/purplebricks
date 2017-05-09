@@ -4,6 +4,7 @@
 
 import React, {Component} from 'react';
 import NavBar from '../components/global/NavBar';
+import Footer from '../components/global/Footer';
 import SecureNegotiationCenterPage from './secure-negotiation-centre-page';
 
 class App extends Component {
@@ -14,6 +15,8 @@ class App extends Component {
                 <NavBar/>
 
                 <SecureNegotiationCenterPage/>
+
+                <Footer/>
 
             </section>
         );
