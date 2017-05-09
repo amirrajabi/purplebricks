@@ -17,7 +17,6 @@ $component: "navbar";
 
   &-right{
 
-    margin-bottom: 0;
     margin-top: config('gutter') * 1.5;
 
     @include breakpoint('tablet') {

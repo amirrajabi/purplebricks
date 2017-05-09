@@ -1,0 +1,9 @@
+$component: 'status-bar';
+
+.#{$component} {
+
+  padding: config('gutter') * 0.5 config('gutter') * 2;
+  background-color: config('color', 'red');
+  color: config('color', 'white');
+
+}

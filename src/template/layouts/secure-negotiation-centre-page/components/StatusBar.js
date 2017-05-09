@@ -3,12 +3,13 @@
  */
 
 import React, { Component } from 'react';
+import Label from '../../../components/common/typography/Header-2'
 
 class StatusBar extends Component {
     render() {
         return (
-            <section>
-                Status Bar
+            <section className="status-bar">
+                <Label text="Status:"/>
             </section>
         );
     }

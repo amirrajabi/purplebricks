@@ -2,55 +2,55 @@ $copy: "typography";
 
 .#{$copy} {
 
-  &--h1{
+  &--h1 {
+    font-size: config('size', 'heading-1');
+  }
+
+  &--h2 {
+    font-size: config('size', 'heading-2');
+  }
+
+  &--h3 {
 
   }
 
-  &--h2{
+  &--copy-lg {
 
   }
 
-  &--h3{
+  &--copy-md {
 
   }
 
-  &--copy-lg{
+  &--copy-sm {
 
   }
 
-  &--copy-md{
+  &--white {
 
   }
 
-  &--copy-sm{
-
-  }
-
-  &--white{
-
-  }
-
-  &--purple{
+  &--purple {
     color: config('color', 'purple');
   }
 
-  &--purple-light{
+  &--purple-light {
     color: config('color', 'purple-light');
   }
 
-  &--red{
+  &--red {
     color: config('color', 'red');
   }
 
-  &--light{
+  &--light {
 
   }
 
-  &--regular{
+  &--regular {
 
   }
 
-  &--bold{
+  &--bold {
 
   }
 
@@ -58,10 +58,12 @@ $copy: "typography";
 
 h1,
 h2,
-h3{
+h3 {
   font-family: config('family', 'heading');
+  margin: 0;
 }
 
-p{
+p {
   font-family: config('family', 'copy');
+  margin: 0;
 }
