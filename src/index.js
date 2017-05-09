@@ -5,6 +5,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './template/layouts/App';
+import './style/index.scss';
 
 ReactDOM.render(
     <App />,
