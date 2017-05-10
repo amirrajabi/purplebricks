@@ -15,7 +15,7 @@ $copy: "typography";
   }
 
   &--copy-lg {
-
+    font-size: config('size', 'heading-1');
   }
 
   &--copy-md {
@@ -28,6 +28,10 @@ $copy: "typography";
 
   &--white {
 
+  }
+
+  &--gray-dark {
+    color: config('color', 'gray-dark');
   }
 
   &--purple {
@@ -43,15 +47,15 @@ $copy: "typography";
   }
 
   &--light {
-
+    font-weight: config('weight', 'light');
   }
 
   &--regular {
-
+    font-weight: config('weight', 'regular');
   }
 
   &--bold {
-
+    font-weight: config('weight', 'bold');
   }
 
 }
@@ -66,4 +70,5 @@ h3 {
 p {
   font-family: config('family', 'copy');
   margin: 0;
+  font-size: config('size', 'body');
 }

@@ -1,0 +1,26 @@
+$component: "box";
+
+.#{$component} {
+
+  &--large{
+    padding: config('gutter') * 1.5 config('gutter') * 2;
+  }
+
+  &--small{
+    padding: config('gutter') config('gutter') * 1.5;
+    margin-bottom: config('gutter');
+  }
+
+  &--purple{
+    border: 1px solid config('color', 'purple-light');
+  }
+
+  &--red{
+    border: 1px solid config('color', 'red');
+  }
+
+  &--gray{
+    border: 1px solid config('color', 'gray-dark');
+  }
+
+}

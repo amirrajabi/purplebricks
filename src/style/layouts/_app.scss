@@ -1,2 +1,24 @@
 /* Secure Negotiation Centre Page */
 @import './secure-negotiation-centre-page/index';
+
+/*
+  Global layouts style
+*/
+
+$component: "layout";
+
+.#{$component} {
+
+  &--l-s-g {
+    padding-left: config('gutter') * 1.5;
+  }
+
+  &--inline{
+    display: inline-block;
+  }
+
+  &--auto-height{
+    line-height: 85%;
+  }
+
+}
