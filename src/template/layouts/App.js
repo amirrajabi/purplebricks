@@ -3,8 +3,8 @@
  */
 
 import React, {Component} from 'react';
-// import NavBar from '../components/global/NavBar';
-// import Footer from '../components/global/Footer';
+import NavBar from '../components/global/NavBar';
+import Footer from '../components/global/Footer';
 import SecureNegotiationCenterPage from './secure-negotiation-centre-page';
 
 class App extends Component {
@@ -12,13 +12,13 @@ class App extends Component {
         return (
             <section className="App">
 
-                {/*<NavBar/>*/}
+                <NavBar/>
 
                 <div className="container">
                     <SecureNegotiationCenterPage/>
                 </div>
 
-                {/*<Footer/>*/}
+                <Footer/>
 
             </section>
         );
