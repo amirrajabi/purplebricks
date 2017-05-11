@@ -6,4 +6,12 @@ $component: 'status-bar';
   background-color: config('color', 'red');
   color: config('color', 'white');
 
+  &__label{
+    font-size: config('size', 'heading-1');
+  }
+
+  &__status{
+    display: inline-block;
+  }
+
 }

@@ -1,0 +1,11 @@
+$component: 'text-button';
+
+.#{$component} {
+
+  padding: config('gutter') * 0.5 config('gutter');
+
+  &--gray{
+    background-color: config('color', 'gray');
+  }
+
+}

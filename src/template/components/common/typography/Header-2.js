@@ -4,15 +4,16 @@
 
 import React, {PropTypes} from 'react';
 
-const Header2 = ({text}) => {
+const Header2 = ({className, text}) => {
     return (
-        <h2 className="typography--h2">
+        <h2 className={className}>
             {text}
         </h2>
     );
 };
 
 Header2.propTypes = {
+    className: PropTypes.string,
     text: PropTypes.string.isRequired
 };
 

@@ -1,0 +1,16 @@
+$component: 'property-details';
+
+.#{$component} {
+
+  border: 1px solid config('color', 'purple');
+  padding: config('gutter') config('gutter') * 2;
+
+  &__property-title{
+
+    display: inline-block;
+    max-width: config('gutter-large') * 3;
+    padding-left: config('gutter');
+
+  }
+
+}
