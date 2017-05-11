@@ -81,7 +81,19 @@ h1,
 h2,
 h3 {
   font-family: config('family', 'heading');
-  margin: 0;
+  margin: config('gutter') * 0.25 0;
+}
+
+h1{
+  font-size: config('size', 'heading-1');
+}
+
+h2{
+  font-size: config('size', 'heading-2');
+}
+
+h3{
+  font-size: config('size', 'heading-3');
 }
 
 p {

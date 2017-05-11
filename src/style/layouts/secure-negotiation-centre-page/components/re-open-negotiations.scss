@@ -2,9 +2,21 @@ $component: "reopen-negotiations";
 
 .#{$component} {
 
+  &__negotiate-text{
+    font-size: config('size', 'body-md');
+    font-weight: config('weight', 'bold');
+    max-width: config('gutter-large') * 4.4;
+  }
+
   &__negotiate {
-    margin-top: config('gutter') * 0.25;
+    margin-top: config('gutter') * 0.35;
     text-align: right;
+  }
+
+  &__currency{
+    font-size: 40px;
+    font-weight: 600;
+    vertical-align: middle;
   }
 
   &__input-offer{
@@ -12,17 +24,22 @@ $component: "reopen-negotiations";
     width: config('gutter-large') * 2.4;
     border: 1px solid config('color', 'gray-dark');
     border-radius: config('gutter') * 0.2;
-    box-sizing: border-box;
-    font-weight: config('weight', 'regular');
-    font-size: config('size', 'heading-1') * 0.8;
-    padding:  config('gutter') * 0.75  config('gutter') * 0.25;
+    font-weight: config('weight', 'semiBold');
+    font-family: config('family', 'copy');
+    font-size: config('size', 'heading-1') * 0.93;
+    padding:  config('gutter') config('gutter') * 0.25;
     margin: config('gutter') * 0.5 0;
-    margin-left: config('gutter') * 0.5;
+    margin-left: config('gutter') * 0.35;
+    vertical-align: middle;
   }
 
   &__submit-btn{
     float: right;
-    margin-top: 10px;
+    margin-top: 14px;
+  }
+
+  &__add-comments{
+    margin-top: config('gutter') * 0.5;
   }
 
 }

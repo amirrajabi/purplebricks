@@ -2,7 +2,12 @@ $component: 'box-header';
 
 .#{$component} {
 
-  border-bottom: 1px solid config('color', 'gray');
-  margin-bottom: config('gutter');
+  border-bottom: 1px solid config('color', 'gray-dark');
+  margin-bottom: config('gutter') * 1.5;
+
+  h1{
+    font-weight: config('weight', 'bold');
+    margin-bottom: config('gutter') * 0.5;
+  }
 
 }

@@ -5,12 +5,28 @@ $component: "btn";
   text-transform: uppercase;
   padding: config('gutter') * 0.4;
   font-size: config('size', 'body-sm') * 0.85;
-  line-height: config('gutter') * 0.6;
+  border-radius: config('gutter') * 0.35;
 
   &--purple{
     color: config('color', 'white');
+    font-weight: config('weight', 'regular');
+    font-size: config('size', 'body-md') + 1 ;
     background-color: config('color', 'purple-light');
-    padding: config('gutter') * 0.2 config('gutter') * 0.4;
+    padding: config('gutter') * 0.25 config('gutter') * 0.5;
+    line-height: config('gutter') * 0.85;
+
+    &:hover{
+      color: config('color', 'gray');
+    }
+  }
+
+  &--gray{
+    color: config('color', 'white');
+    font-weight: config('weight', 'regular');
+    font-size: config('size', 'body-md') + 1 ;
+    background-color: config('color', 'gray');
+    padding: config('gutter') * 0.25 config('gutter') * 0.5;
+    line-height: config('gutter') * 0.85;
 
     &:hover{
       color: config('color', 'gray');
@@ -19,8 +35,11 @@ $component: "btn";
 
   &--blue{
     color: config('color', 'white');
-    background-color: config('color', 'blue');
     font-size: config('size', 'body-lg');
+    font-weight: config('weight', 'regular');
+    background-color: config('color', 'blue');
+    padding: config('gutter') * 0.35 config('gutter') * 0.65;
+    line-height: config('gutter') * 1.1;
 
     &:hover{
       color: config('color', 'gray');

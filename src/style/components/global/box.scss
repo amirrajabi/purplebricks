@@ -8,7 +8,7 @@ $component: "box";
 
   &--small{
     padding: config('gutter') config('gutter') * 1.5;
-    margin-bottom: config('gutter');
+    margin-bottom: config('gutter') * 1.25;
   }
 
   &--purple{
