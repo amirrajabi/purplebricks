@@ -1,0 +1,28 @@
+$component: "reopen-negotiations";
+
+.#{$component} {
+
+  &__negotiate {
+    margin-top: config('gutter') * 0.25;
+    text-align: right;
+  }
+
+  &__input-offer{
+    height: config('gutter') * 1.5;
+    width: config('gutter-large') * 2.4;
+    border: 1px solid config('color', 'gray-dark');
+    border-radius: config('gutter') * 0.2;
+    box-sizing: border-box;
+    font-weight: config('weight', 'regular');
+    font-size: config('size', 'heading-1') * 0.8;
+    padding:  config('gutter') * 0.75  config('gutter') * 0.25;
+    margin: config('gutter') * 0.5 0;
+    margin-left: config('gutter') * 0.5;
+  }
+
+  &__submit-btn{
+    float: right;
+    margin-top: 10px;
+  }
+
+}

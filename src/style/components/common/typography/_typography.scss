@@ -19,7 +19,7 @@ $copy: "typography";
   }
 
   &--copy-lg {
-    font-size: config('size', 'body-lg');
+    font-size: config('size', 'heading-1');
   }
 
   &--copy-md {
@@ -40,6 +40,10 @@ $copy: "typography";
 
   &--gray {
     color: config('color', 'gray');
+  }
+
+  &--gray-dark {
+    color: config('color', 'gray-dark');
   }
 
   &--purple {
@@ -75,7 +79,7 @@ $copy: "typography";
 // Global style for typography
 h1,
 h2,
-h3{
+h3 {
   font-family: config('family', 'heading');
   margin: 0;
 }
@@ -83,6 +87,7 @@ h3{
 p {
   font-family: config('family', 'copy');
   margin: 0;
+  font-size: config('size', 'body');
 }
 
 span{

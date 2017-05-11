@@ -1,0 +1,30 @@
+$component: "btn";
+
+.#{$component} {
+
+  text-transform: uppercase;
+  padding: config('gutter') * 0.4;
+  font-size: config('size', 'body-sm') * 0.85;
+  line-height: config('gutter') * 0.6;
+
+  &--purple{
+    color: config('color', 'white');
+    background-color: config('color', 'purple-light');
+    padding: config('gutter') * 0.2 config('gutter') * 0.4;
+
+    &:hover{
+      color: config('color', 'gray');
+    }
+  }
+
+  &--blue{
+    color: config('color', 'white');
+    background-color: config('color', 'blue');
+    font-size: config('size', 'body-lg');
+
+    &:hover{
+      color: config('color', 'gray');
+    }
+  }
+
+}

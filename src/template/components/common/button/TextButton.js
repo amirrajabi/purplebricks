@@ -6,7 +6,8 @@ import React, {PropTypes} from 'react';
 
 const TextButton = ({className, text}) => {
     return (
-        <button type="button" className={className}>
+        <button type="button"
+                className={className}>
             {text}
         </button>
     );
