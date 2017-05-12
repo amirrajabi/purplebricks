@@ -43,7 +43,7 @@ class PropertyDetails extends Component {
                         <Copy className="typography--gray-dark typography--copy-md typography--x-light"
                               text="Asking Price:"/>
 
-                        <Copy className="typography--purple typography--copy-lg"
+                        <Title className="property-details__property-title typography--purple"
                               text="£189,950"/>
 
                         <Button className="btn btn--gray"

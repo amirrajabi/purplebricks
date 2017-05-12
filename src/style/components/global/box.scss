@@ -4,6 +4,7 @@ $component: "box";
 
   &--large{
     padding: config('gutter') * 1.5 config('gutter') * 2;
+    margin-bottom: config('gutter') * 1.5;
   }
 
   &--small{
@@ -16,7 +17,8 @@ $component: "box";
   }
 
   &--red{
-    border: 1px solid config('color', 'red');
+    border: 2px solid config('color', 'red');
+    background-color: config('color', 'gray');
   }
 
   &--gray{

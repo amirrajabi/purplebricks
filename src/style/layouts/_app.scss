@@ -15,6 +15,7 @@ $component: "layout";
 
   &--inline{
     display: inline-block;
+    vertical-align: middle;
   }
 
   &--auto-height{
