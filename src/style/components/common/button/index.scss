@@ -24,7 +24,7 @@ $component: "btn";
     color: config('color', 'white');
     font-weight: config('weight', 'regular');
     font-size: config('size', 'body-md') + 1 ;
-    background-color: config('color', 'gray');
+    background-color: config('color', 'gray-dark');
     padding: config('gutter') * 0.25 config('gutter') * 0.5;
     line-height: config('gutter') * 0.85;
 

@@ -2,16 +2,31 @@
  * Created by Amir on 9/5/17.
  */
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import Header from '../../../components/global/BoxHeader';
 
-class BuyerOffer extends Component {
+class BuyerDetails extends Component {
+
+    constructor(props) {
+        super(props);
+        // data should come from API call
+        // Hard code here temporary
+        this.state = {
+            headerText: 'Buyer’s offer',
+            propertyText: 'Propert infoPropert infoPropert info'
+        };
+    }
+
     render() {
         return (
-            <section>
-                Buyer Offer
+            <section className="property-details">
+
+                <Header className="typography--purple"
+                        text={this.state.headerText}/>
+
             </section>
         );
     }
 }
 
-export default BuyerOffer;
+export default BuyerDetails;

@@ -4,7 +4,7 @@
 
 import React, {Component} from 'react';
 import Header from '../../../components/global/BoxHeader';
-import Title from '../../../components/common/typography/Header-2';
+import Title from '../../../components/common/typography/Header-3';
 import Copy from '../../../components/common/typography/Body';
 import Image from '../../../components/common/assets/Image';
 import Button from '../../../components/common/button/TextButton';
@@ -17,13 +17,8 @@ class PropertyDetails extends Component {
         // data should come from API call
         // Hard code here temporary
         this.state = {
-            headerText: 'Test StatusTest StatusTest Status',
-            propertyText: 'Propert infoPropert infoPropert info',
-            headerClassName: 'typography--purple',
-            propertyClassName: 'property-details__property-title typography--purple',
-            askPriceClassName: 'typography--gray typography--copy-xs pull-right',
-            priceClassName: 'typography--purple typography--copy-lg pull-right',
-            buttonClassName: 'text-button text-button--gray typography--white'
+            headerText: 'The property',
+            propertyText: 'Eddington House, 16 Wigginton Road,Tamworth, B79 8PB'
         };
     }
 
@@ -31,7 +26,7 @@ class PropertyDetails extends Component {
         return (
             <section className="property-details">
 
-                <Header className={this.state.headerClassName}
+                <Header className="typography--purple"
                         text={this.state.headerText}/>
 
                 <div className="row">
@@ -39,20 +34,20 @@ class PropertyDetails extends Component {
 
                         <Image url={PropertyImageURL}/>
 
-                        <Title className={this.state.propertyClassName}
+                        <Title className="property-details__property-title typography--purple"
                                text={this.state.propertyText}/>
 
                     </div>
-                    <div className="col-sm-4 col-xs-12">
+                    <div className="property-details__price col-sm-4 col-xs-12">
 
-                        <Copy className={this.state.askPriceClassName}
+                        <Copy className="typography--gray-dark typography--copy-md typography--x-light"
                               text="Asking Price:"/>
 
-                        <Copy className={this.state.priceClassName}
-                              text="$ 1,833,200"/>
+                        <Copy className="typography--purple typography--copy-lg"
+                              text="£189,950"/>
 
-                        <Button className={this.state.buttonClassName}
-                                text="do some things"/>
+                        <Button className="btn btn--gray"
+                                text="view extras included"/>
 
                     </div>
                 </div>

@@ -6,11 +6,14 @@ $component: 'property-details';
   padding: config('gutter') config('gutter') * 2;
 
   &__property-title{
-
     display: inline-block;
+    vertical-align: middle;
     max-width: config('gutter-large') * 3;
-    padding-left: config('gutter');
+    padding-left: config('gutter') * 0.75;
+  }
 
+  &__price{
+    text-align: right;
   }
 
 }
