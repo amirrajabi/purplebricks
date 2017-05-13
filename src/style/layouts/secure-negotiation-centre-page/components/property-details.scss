@@ -2,18 +2,19 @@ $component: 'property-details';
 
 .#{$component} {
 
-  border: 1px solid config('color', 'purple');
-  padding: config('gutter') config('gutter') * 2;
-
-  &__property-title{
-    display: inline-block;
-    vertical-align: middle;
-    max-width: config('gutter-large') * 3;
-    padding-left: config('gutter') * 0.75;
+  &__info{
+    text-align: right;
   }
 
   &__price{
-    text-align: right;
+    font-size: config('size', 'heading-2') * 1.07;
+    font-weight: bold;
+  }
+
+  &__address{
+    vertical-align: top !important;
+    max-width: config('gutter-large') * 4.5;
+    padding-left: config('gutter') * 0.75;
   }
 
 }

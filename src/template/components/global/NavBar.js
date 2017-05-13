@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import Image from '../common/assets/Image';
-import Header1 from '../common/typography/Header-1';
+import Header from '../common/typography/Header-1';
 import Logo from '../../../assets/images/logo.jpg';
 
 const NavBar = () => {
@@ -20,7 +20,7 @@ const NavBar = () => {
                         </div>
                         <div className="col-sm-6">
 
-                            <Header1 className="navbar-right typography--purple"
+                            <Header className="navbar-title typography--purple"
                                      text="Secure negotiation centre"/>
 
                         </div>

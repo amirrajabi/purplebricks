@@ -5,7 +5,6 @@
 import React, {Component} from 'react';
 import Header from '../../../components/global/BoxHeader';
 import Body from '../../../components/common/typography/Body';
-import Button from '../../../components/common/button/LinkButton';
 
 class BuyerDetails extends Component {
 
@@ -31,27 +30,30 @@ class BuyerDetails extends Component {
                 <Header className="typography--purple"
                         text={this.state.headerText}/>
 
-
-
                 <ul>
-                    <li>
-                        <Body className="typography--purple layout--inline buyer-datails--label-width" text="Name:"/>
-                        <Body className="typography--purple layout--inline" text={this.state.buyerDetails.name}/>
+                    <li className="buyer-details--item">
+                        <Body className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
+                              text="Name:"/>
+                        <Body className="buyer-details__info typography--black-light layout--inline"
+                              text={this.state.buyerDetails.name}/>
                     </li>
-                    <li>
-                        <Body className="typography--purple layout--inline buyer-datails--label-width"
+                    <li className="buyer-details--item">
+                        <Body className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
                               text="Buying position:"/>
-                        <Body className="typography--purple layout--inline" text="Buying position:"/>
+                        <Body className="buyer-details__info typography--black-light layout--inline"
+                              text={this.state.buyerDetails.buyingPosition}/>
                     </li>
-                    <li>
-                        <Body className="typography--purple layout--inline buyer-datails--label-width"
+                    <li className="buyer-details--item">
+                        <Body className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
                               text="Financial position:"/>
-                        <Body className="typography--purple layout--inline" text="Financial position:"/>
+                        <Body className="buyer-details__info typography--black-light layout--inline"
+                              text={this.state.buyerDetails.financialPosition}/>
                     </li>
-                    <li>
-                        <Body className="typography--purple layout--inline buyer-datails--label-width"
+                    <li className="buyer-details--item">
+                        <Body className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
                               text="Timescale:"/>
-                        <Body className="typography--purple layout--inline" text="Timescale:"/>
+                        <Body className="buyer-details__info typography--black-light layout--inline"
+                              text={this.state.buyerDetails.timescale}/>
                     </li>
                 </ul>
 

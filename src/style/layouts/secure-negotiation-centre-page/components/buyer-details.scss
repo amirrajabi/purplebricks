@@ -1,9 +1,21 @@
-$component: "buyer-datails";
+$component: "buyer-details";
 
 .#{$component} {
 
+  &--item{
+    margin-bottom: config('gutter') * 0.5;
+  }
+
   &--label-width{
     width: 145px;
+  }
+
+  &__label{
+
+  }
+
+  &__info{
+
   }
 
 }

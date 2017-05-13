@@ -1,0 +1,30 @@
+$component: 'buyer-offer';
+
+.#{$component} {
+
+  .box-header{
+    margin-bottom: 15px;
+  }
+
+  &__price{
+    font-size: config('size', 'body-xl') * 1.07;
+    font-weight: config('weight', 'bold');
+  }
+
+  &__description{
+    font-size: config('size', 'body-xs');
+    font-weight: config('weight', 'regular');
+    margin-bottom: config('gutter') * 0.8
+  }
+
+  &__date{
+    font-size: config('size', 'body-sm');
+    font-weight: config('weight', 'regular');
+    margin-right: config('gutter') * .75;
+  }
+
+  &__view-btn{
+    margin-right: config('gutter') * 1.5;
+  }
+
+}

@@ -22,22 +22,22 @@ class YourResponse extends Component {
 
     render() {
         return (
-            <section className="buyer-offer box--large box--red">
+            <section className="your-response box--large box--red">
 
                 <Header className="typography--red"
                         text={this.state.headerText}/>
 
-                <Body className="typography--red typography--copy-lg"
+                <Body className="your-response__description typography--red"
                       text="You have withdrawn your acceptance of the offer"/>
-
-                <Button className="layout--inline btn btn--gray"
+                
+                <Button className="btn btn--gray your-response__view-btn layout--inline"
                         text="view comments"/>
 
-                <Body className="layout--inline typography--purple"
+                <Body className="your-response__date layout--inline typography--purple"
                       text="Date: 24/10/2013"/>
 
-                <Body className="layout--inline typography--purple"
-                      text="Time: 20.17"/>
+                <Body className="your-response__date layout--inline typography--purple"
+                      text="Time: 21.05"/>
 
             </section>
         );

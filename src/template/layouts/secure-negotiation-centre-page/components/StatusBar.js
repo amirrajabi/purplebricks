@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import Status from '../../../components/common/typography/Body'
+import Status from '../../../components/common/typography/Header-1'
 
 class StatusBar extends Component {
 
@@ -12,7 +12,7 @@ class StatusBar extends Component {
         // data should come from API call
         // Hard code here temporary
         this.state = {
-            statusText: 'Test Status'
+            statusText: 'Withdrawn'
         };
     }
 
@@ -20,11 +20,10 @@ class StatusBar extends Component {
         return (
             <section className="status-bar">
 
-                <span className="status-bar__label">
-                    Status:
-                </span>
+                <Status className="status-bar__label layout--inline"
+                        text="Status:"/>
 
-                <Status className="status-bar__status typography--copy-xl typography--x-light"
+                <Status className="status-bar__status layout--inline"
                         text={this.state.statusText}/>
 
             </section>

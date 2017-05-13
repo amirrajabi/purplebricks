@@ -26,17 +26,19 @@ class BuyerDetails extends Component {
                 <Header className="typography--purple"
                         text={this.state.headerText}/>
                 
-                <Body className="" text="£179,000"/>
+                <Body className="buyer-offer__price"
+                      text="£179,000"/>
 
-                <Body className="" text="Subject to offer qualification by Purplebricks"/>
+                <Body className="buyer-offer__description"
+                      text="Subject to offer qualification by Purplebricks"/>
 
-                <Button className="layout--inline btn btn--gray"
+                <Button className="btn btn--gray buyer-offer__view-btn layout--inline"
                         text="view comments"/>
 
-                <Body className="layout--inline typography--purple"
+                <Body className="buyer-offer__date layout--inline typography--purple"
                       text="Date: 24/10/2013"/>
 
-                <Body className="layout--inline typography--purple"
+                <Body className="buyer-offer__date layout--inline typography--purple"
                       text="Time: 20.17"/>
 
             </section>

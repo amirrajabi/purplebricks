@@ -26,28 +26,25 @@ class ReOpenNegotiations extends Component {
                         text="Re-open negotiations"/>
 
                 <div className="box--small box--gray">
-                    <div className="row">
-                        <div className="col-sm-8">
-                            <Body className="reopen-negotiations__negotiate-text typography--purple"
-                                  text={this.state.negotiateText}/>
-                        </div>
-                        <div className="col-sm-4 reopen-negotiations__negotiate">
-                            <Button className="btn btn--purple"
-                                    text="negotiate for me"/>
-                        </div>
+                    <div className="reopen-negotiations__text-container layout--inline">
+                        <Body className="reopen-negotiations__text typography--purple"
+                              text={this.state.negotiateText}/>
                     </div>
+                    <Button className="btn btn--purple reopen-negotiations__btn layout--inline"
+                            text="negotiate for me"/>
                 </div>
 
-                <div className="clearfix">
-                    <Title className="typography--purple typography--bold layout--l-s-g"
-                           text="Enter an offer you would be willing to accept:"/>
+                <Title className="typography--purple typography--bold layout--l-s-g"
+                       text="Enter an offer you would be willing to accept:"/>
+                <div>
+                    <div className="reopen-negotiations__input-submit layout--inline">
+                        <Body className="reopen-negotiations__currency typography--gray-dark layout--inline"
+                              text="£"/>
 
-                    <Body className="reopen-negotiations__currency typography--gray-dark layout--inline"
-                          text="£"/>
+                        <InputText className="reopen-negotiations__input-offer layout--inline"/>
+                    </div>
 
-                    <InputText className="reopen-negotiations__input-offer layout--inline"/>
-
-                    <Button className="reopen-negotiations__submit-btn btn btn--blue"
+                    <Button className="reopen-negotiations__submit-btn btn btn--blue layout--inline"
                             text="submit offer"/>
                 </div>
 

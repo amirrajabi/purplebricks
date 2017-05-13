@@ -5,4 +5,35 @@ $copy: "footer";
   background-color: config('color', 'black-light');
   padding: config('gutter') * 0.55 0;
 
+  .nav-item{
+    padding-left: 0;
+
+    .btn--link{
+      padding-left: 0;
+      padding-right: config('gutter') * 0.75;
+      margin-right: config('gutter') * 0.5;
+      transition: color 0.5s;
+
+      &:hover{
+        color: config('color', 'gray-dark');
+      }
+    }
+  }
+
+  .socials{
+
+    &__item{
+      padding: 0 config('gutter') * 0.25;
+    }
+
+    &__link{
+      color: config('color', 'gray-light');
+      transition: color 0.5s;
+
+      &:hover{
+        color: config('color', 'gray');
+      }
+    }
+  }
+
 }

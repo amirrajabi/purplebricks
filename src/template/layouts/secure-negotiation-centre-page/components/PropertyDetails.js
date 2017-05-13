@@ -18,13 +18,13 @@ class PropertyDetails extends Component {
         // Hard code here temporary
         this.state = {
             headerText: 'The property',
-            propertyText: 'Eddington House, 16 Wigginton Road,Tamworth, B79 8PB'
+            propertyText: 'Eddington House, 16 Wigginton Road, Tamworth, B79 8PB'
         };
     }
 
     render() {
         return (
-            <section className="property-details">
+            <section className="property-details box--large box--purple">
 
                 <Header className="typography--purple"
                         text={this.state.headerText}/>
@@ -32,18 +32,19 @@ class PropertyDetails extends Component {
                 <div className="row">
                     <div className="col-sm-8 col-xs-12">
 
-                        <Image url={PropertyImageURL}/>
+                        <Image className="layout--inline"
+                               url={PropertyImageURL}/>
 
-                        <Title className="property-details__property-title typography--purple"
+                        <Title className="property-details__address typography--purple layout--inline"
                                text={this.state.propertyText}/>
 
                     </div>
-                    <div className="property-details__price col-sm-4 col-xs-12">
+                    <div className="property-details__info col-sm-4 col-xs-12">
 
                         <Copy className="typography--gray-dark typography--copy-md typography--x-light"
-                              text="Asking Price:"/>
+                              text="Asking rice:"/>
 
-                        <Title className="property-details__property-title typography--purple layout--full-width"
+                        <Title className="property-details__price typography--purple layout--full-width"
                               text="£189,950"/>
 
                         <Button className="btn btn--gray"

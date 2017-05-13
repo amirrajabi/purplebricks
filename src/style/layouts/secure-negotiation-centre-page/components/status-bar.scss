@@ -2,16 +2,20 @@ $component: 'status-bar';
 
 .#{$component} {
 
-  padding: config('gutter') * 0.5 config('gutter') * 2;
+  padding: 0 config('gutter') * 2;
   background-color: config('color', 'red');
   color: config('color', 'white');
+  margin-bottom: config('gutter') * 0.5;
 
   &__label{
-    font-size: config('size', 'heading-1');
+    font-size: config('size', 'body-lg');
+    font-weight: config('weight', 'bold');
+    padding-right: config('gutter') * 0.25;
   }
 
   &__status{
-    display: inline-block;
+    font-size: config('size', 'body-lg');
+    font-weight: config('weight', 'x-light');
   }
 
 }

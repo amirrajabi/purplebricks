@@ -3,7 +3,8 @@ $component: "box";
 .#{$component} {
 
   &--large{
-    padding: config('gutter') * 1.5 config('gutter') * 2;
+    padding: config('gutter') * 0.75 config('gutter') * 2;
+    padding-bottom: config('gutter') * 1.25;
     margin-bottom: config('gutter') * 1.5;
   }
 

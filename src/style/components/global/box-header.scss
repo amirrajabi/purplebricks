@@ -3,7 +3,7 @@ $component: 'box-header';
 .#{$component} {
 
   border-bottom: 1px solid config('color', 'gray-dark');
-  margin-bottom: config('gutter') * 1.5;
+  margin-bottom: config('gutter') * 1.25;
 
   h1{
     font-weight: config('weight', 'bold');

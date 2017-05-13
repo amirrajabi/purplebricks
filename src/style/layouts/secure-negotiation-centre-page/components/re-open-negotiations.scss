@@ -2,21 +2,19 @@ $component: "reopen-negotiations";
 
 .#{$component} {
 
-  &__negotiate-text{
-    font-size: config('size', 'body-md');
-    font-weight: config('weight', 'bold');
-    max-width: config('gutter-large') * 4.4;
+  &__text-container{
+    width: calc(100% - 178px);
   }
 
-  &__negotiate {
-    margin-top: config('gutter') * 0.35;
-    text-align: right;
+  &__text{
+    font-size: config('size', 'body-md') + 1;
+    font-weight: config('weight', 'semiBold');
+    max-width: config('gutter-large') * 4.75;
   }
 
   &__currency{
-    font-size: 40px;
-    font-weight: 600;
-    vertical-align: middle;
+    font-size: config('size', 'heading-1') * 1.333;
+    font-weight: config('weight', 'semiBold');
   }
 
   &__input-offer{
@@ -30,12 +28,10 @@ $component: "reopen-negotiations";
     padding:  config('gutter') config('gutter') * 0.25;
     margin: config('gutter') * 0.5 0;
     margin-left: config('gutter') * 0.35;
-    vertical-align: middle;
   }
 
-  &__submit-btn{
-    float: right;
-    margin-top: 14px;
+  &__input-submit{
+    width: calc(100% - 196px);
   }
 
   &__add-comments{
