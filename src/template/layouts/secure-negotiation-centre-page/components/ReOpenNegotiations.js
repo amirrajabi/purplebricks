@@ -34,7 +34,7 @@ class ReOpenNegotiations extends Component {
                             text="negotiate for me"/>
                 </div>
 
-                <Title className="typography--purple typography--bold layout--l-s-g"
+                <Title className="reopen-negotiations__title-submit typography--purple typography--bold"
                        text="Enter an offer you would be willing to accept:"/>
                 <div>
                     <div className="reopen-negotiations__input-submit layout--inline">
@@ -48,7 +48,7 @@ class ReOpenNegotiations extends Component {
                             text="submit offer"/>
                 </div>
 
-                <div className="layout--l-s-g">
+                <div className="">
                     <Button className="reopen-negotiations__add-comments btn btn--purple"
                             text="add comments"/>
                 </div>

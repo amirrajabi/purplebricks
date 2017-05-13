@@ -12,18 +12,22 @@ const NavBar = () => {
             <div className="container">
                 <div className="navbar-header">
                     <div className="row">
-                        <div className="col-sm-6">
 
-                            <Image url={Logo}
+                        <div className="navbar-logo col-sm-6">
+
+                            <Image className=""
+                                   url={Logo}
                                    alt="Brand Logo"/>
 
                         </div>
+
                         <div className="col-sm-6">
 
                             <Header className="navbar-title typography--purple"
-                                     text="Secure negotiation centre"/>
+                                    text="Secure negotiation centre"/>
 
                         </div>
+
                     </div>
                 </div>
             </div>

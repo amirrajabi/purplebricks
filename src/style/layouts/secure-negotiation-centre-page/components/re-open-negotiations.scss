@@ -3,13 +3,32 @@ $component: "reopen-negotiations";
 .#{$component} {
 
   &__text-container{
-    width: calc(100% - 178px);
+    width: 100%;
+    margin-bottom: config('gutter') * 0.5;
+
+    @include breakpoint('desktop') {
+      width: calc(100% - 178px);
+      margin-bottom: 0;
+    }
+  }
+
+  .box--small{
+    .btn{
+      margin-bottom: 0;
+    }
   }
 
   &__text{
     font-size: config('size', 'body-md') + 1;
     font-weight: config('weight', 'semiBold');
     max-width: config('gutter-large') * 4.75;
+  }
+
+  &__title-submit{
+    padding-left: 0;
+    @include breakpoint('tablet') {
+      padding-left: config('gutter') * 1.5;
+    }
   }
 
   &__currency{
@@ -19,7 +38,7 @@ $component: "reopen-negotiations";
 
   &__input-offer{
     height: config('gutter') * 1.5;
-    width: config('gutter-large') * 2.4;
+    width: calc(100% - 30px);
     border: 1px solid config('color', 'gray-dark');
     border-radius: config('gutter') * 0.2;
     font-weight: config('weight', 'semiBold');
@@ -28,14 +47,41 @@ $component: "reopen-negotiations";
     padding:  config('gutter') config('gutter') * 0.25;
     margin: config('gutter') * 0.5 0;
     margin-left: config('gutter') * 0.35;
+
+    @include breakpoint('tablet') {
+      width: config('gutter-large') * 2.4;
+    }
   }
 
   &__input-submit{
-    width: calc(100% - 196px);
+    width: 100%;
+
+    @include breakpoint('tablet') {
+      width: calc(100% - 196px);
+    }
+  }
+
+  &__submit-btn{
+    width: 100%;
+    margin-left: 0;
+
+    @include breakpoint('tablet') {
+      width: auto;
+      margin-left: config('gutter') * 1.5;
+    }
+
+    @include breakpoint('desktop') {
+      width: auto;
+      margin-left: 0;
+    }
   }
 
   &__add-comments{
     margin-top: config('gutter') * 0.5;
+    margin-left: 0;
+    @include breakpoint('tablet') {
+      margin-left: config('gutter') * 1.5;
+    }
   }
 
 }

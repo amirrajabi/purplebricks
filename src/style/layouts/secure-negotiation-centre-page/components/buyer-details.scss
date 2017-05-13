@@ -11,7 +11,11 @@ $component: "buyer-details";
   }
 
   &__label{
+    display: block !important;
 
+    @include breakpoint('tablet') {
+      display: inline-block !important;
+    }
   }
 
   &__info{

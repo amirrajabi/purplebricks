@@ -21,14 +21,24 @@ $component: "navbar";
     height: config('height', 'full');
   }
 
+  &-logo {
+    text-align: center;
+
+    @include breakpoint('tablet') {
+      text-align: left;
+    }
+  }
+
   &-title {
-    float: right;
+    float: none;
+    text-align: center;
     margin-top: config('gutter') * 1.5;
     font-size: config('size', 'heading-1') * 0.93;
     font-weight: bold;
 
     @include breakpoint('tablet') {
-      margin-right: 0;
+      float: right;
+      text-align: right;
     }
   }
 

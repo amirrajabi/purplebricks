@@ -32,7 +32,7 @@ class PropertyDetails extends Component {
                 <div className="row">
                     <div className="col-sm-8 col-xs-12">
 
-                        <Image className="layout--inline"
+                        <Image className="property-details__image layout--inline"
                                url={PropertyImageURL}/>
 
                         <Title className="property-details__address typography--purple layout--inline"

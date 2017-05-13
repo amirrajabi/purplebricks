@@ -21,7 +21,7 @@ class Footer extends Component {
         return (
             <footer className="footer">
                 <div className="container clearfix">
-                    <nav className=" pull-left">
+                    <nav className="pull-left">
 
                         <ul className="list-inline layout--list-reset">
                             <li className="nav-item">

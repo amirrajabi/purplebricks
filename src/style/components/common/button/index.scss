@@ -6,6 +6,13 @@ $component: "btn";
   font-size: config('size', 'body-md');
   text-transform: uppercase;
   border-radius: 0;
+  display: block;
+  margin-bottom: config('gutter') * 0.5;
+
+  @include breakpoint('desktop') {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 
   &--link{
     font-size: config('size', 'body-md');

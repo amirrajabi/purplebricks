@@ -2,7 +2,7 @@
 
     //------------------------------------------------------ Main break points
     @if $point == desktop {
-        @media screen and (min-width: 1024px) { @content; }
+        @media screen and (min-width: 1200px) { @content; }
     }
     @else if $point == tablet {
         @media screen and (min-width: 768px) { @content; } //and (max-width: 1023px)

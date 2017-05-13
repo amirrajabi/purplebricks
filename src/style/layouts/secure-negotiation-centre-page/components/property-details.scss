@@ -2,8 +2,21 @@ $component: 'property-details';
 
 .#{$component} {
 
+  &__image{
+    margin-right: config('gutter') * 0.75;
+  }
+
+  &__address{
+    vertical-align: top !important;
+    max-width: config('gutter-large') * 4.5;
+  }
+
   &__info{
-    text-align: right;
+    text-align: left;
+
+    @include breakpoint('tablet') {
+      text-align: right;
+    }
   }
 
   &__price{
@@ -11,10 +24,12 @@ $component: 'property-details';
     font-weight: bold;
   }
 
-  &__address{
-    vertical-align: top !important;
-    max-width: config('gutter-large') * 4.5;
-    padding-left: config('gutter') * 0.75;
+  .btn{
+    float: left;
+
+    @include breakpoint('tablet') {
+      float: right;
+    }
   }
 
 }
