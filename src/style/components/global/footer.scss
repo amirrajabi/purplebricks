@@ -1,0 +1,8 @@
+$copy: "footer";
+
+.#{$copy} {
+
+  background-color: config('color', 'black-light');
+  padding: config('gutter') * 0.55 0;
+
+}

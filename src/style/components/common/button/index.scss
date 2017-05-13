@@ -3,9 +3,13 @@ $component: "btn";
 .#{$component} {
 
   text-transform: uppercase;
-  padding: config('gutter') * 0.4;
-  font-size: config('size', 'body-sm') * 0.85;
-  border-radius: config('gutter') * 0.35;
+  border-radius: 0;
+
+  &--link{
+    font-size: config('size', 'body-md');
+    padding: 0 config('gutter') * 0.5;
+    line-height: config('gutter') * 0.75;
+  }
 
   &--purple{
     color: config('color', 'white');
@@ -14,6 +18,7 @@ $component: "btn";
     background-color: config('color', 'purple-light');
     padding: config('gutter') * 0.25 config('gutter') * 0.5;
     line-height: config('gutter') * 0.85;
+    border-radius: config('gutter') * 0.35;
 
     &:hover{
       color: config('color', 'gray');
@@ -27,6 +32,7 @@ $component: "btn";
     background-color: config('color', 'gray-dark');
     padding: config('gutter') * 0.25 config('gutter') * 0.5;
     line-height: config('gutter') * 0.85;
+    border-radius: config('gutter') * 0.35;
 
     &:hover{
       color: config('color', 'gray');
@@ -40,6 +46,7 @@ $component: "btn";
     background-color: config('color', 'blue');
     padding: config('gutter') * 0.35 config('gutter') * 0.65;
     line-height: config('gutter') * 1.1;
+    border-radius: config('gutter') * 0.35;
 
     &:hover{
       color: config('color', 'gray');

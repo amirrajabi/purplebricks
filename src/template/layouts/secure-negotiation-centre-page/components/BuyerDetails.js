@@ -5,6 +5,7 @@
 import React, {Component} from 'react';
 import Header from '../../../components/global/BoxHeader';
 import Body from '../../../components/common/typography/Body';
+import Button from '../../../components/common/button/LinkButton';
 
 class BuyerDetails extends Component {
 
@@ -14,11 +15,12 @@ class BuyerDetails extends Component {
         // Hard code here temporary
         this.state = {
             headerText: 'Buyer’s details',
-            buyerDetails: [
-                'Mr David Shepherd',
-                'Property to sell - 20 weeks on the market',
-                'Mortgage required - approved',
-                'Would like to move in 10 weeks - no chain']
+            buyerDetails: {
+                name: 'Mr David Shepherd',
+                buyingPosition: 'Property to sell - 20 weeks on the market',
+                financialPosition: 'Mortgage required - approved',
+                timescale: 'Would like to move in 10 weeks - no chain'
+            }
         };
     }
 
@@ -28,31 +30,31 @@ class BuyerDetails extends Component {
 
                 <Header className="typography--purple"
                         text={this.state.headerText}/>
-                <div className="row">
-                    <div className="col-xs-2">
-                        <ul>
-                            <li>
-                                <Body className="typography--purple" text="Name:"/>
-                            </li>
-                            <li>
-                                <Body className="typography--purple" text="Buying position:"/>
-                            </li>
-                            <li>
-                                <Body className="typography--purple" text="Financial position:"/>
-                            </li>
-                            <li>
-                                <Body className="typography--purple" text="Timescale:"/>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="col-xs-10">
-                        <ul>
-                            {this.state.buyerDetails.map(function (index, key) {
-                                return <li key={key}><Body className="typography--gray-dark" text={index}/></li>;
-                            })}
-                        </ul>
-                    </div>
-                </div>
+
+
+
+                <ul>
+                    <li>
+                        <Body className="typography--purple layout--inline buyer-datails--label-width" text="Name:"/>
+                        <Body className="typography--purple layout--inline" text={this.state.buyerDetails.name}/>
+                    </li>
+                    <li>
+                        <Body className="typography--purple layout--inline buyer-datails--label-width"
+                              text="Buying position:"/>
+                        <Body className="typography--purple layout--inline" text="Buying position:"/>
+                    </li>
+                    <li>
+                        <Body className="typography--purple layout--inline buyer-datails--label-width"
+                              text="Financial position:"/>
+                        <Body className="typography--purple layout--inline" text="Financial position:"/>
+                    </li>
+                    <li>
+                        <Body className="typography--purple layout--inline buyer-datails--label-width"
+                              text="Timescale:"/>
+                        <Body className="typography--purple layout--inline" text="Timescale:"/>
+                    </li>
+                </ul>
+
             </section>
         );
     }

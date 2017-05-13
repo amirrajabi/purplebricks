@@ -18,8 +18,21 @@ $component: "layout";
     vertical-align: middle;
   }
 
-  &--auto-height{
-    //line-height: 85%;
+  &--right-border-white{
+    border-right: 1px solid config('color', 'white');
+  }
+
+  &--non-left-padding{
+    padding-left: 0 !important;
+  }
+
+  &--full-width{
+    width: 100%;
+  }
+
+  &--list-reset{
+    margin: 0;
+    padding: 0;
   }
 
 }
