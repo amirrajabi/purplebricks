@@ -5,7 +5,6 @@
 import React, {Component} from 'react';
 import Header from '../../../components/global/BoxHeader';
 import Body from '../../../components/common/typography/Body';
-// import Title from '../../../components/common/typography/Header-3';
 import Button from '../../../components/common/button/TextButton';
 import Input from 'react-number-format';
 
@@ -38,7 +37,7 @@ class ReOpenNegotiations extends Component {
         this.setState({offerValue: offer.target.value});
 
         if (!offer.target.value) {
-            this.setState({errorMessage: 'Your offer must be a Number.'});
+            this.setState({errorMessage: 'Your offer must be a number.'});
         } else {
             this.setState({errorMessage: ''});
         }
@@ -52,20 +51,28 @@ class ReOpenNegotiations extends Component {
                         text="Re-open negotiations"/>
 
                 <div className="box--small box--gray">
+
                     <div className="reopen-negotiations__text-container layout--inline">
+
                         <Body className="reopen-negotiations__text typography--purple"
                               text={this.state.negotiateText}/>
+
                     </div>
+
                     <Button className="btn btn--purple reopen-negotiations__btn layout--inline"
                             text="negotiate for me"/>
+
                 </div>
 
                 <label className="reopen-negotiations__title-submit typography--h3 typography--purple typography--bold"
                        htmlFor="inputOffer">
                     Enter an offer you would be willing to accept:
                 </label>
+
                 <form onSubmit={this.submitOffer} noValidate>
+
                     <div className="reopen-negotiations__input-submit layout--inline">
+
                         <Body className="reopen-negotiations__currency typography--gray-dark layout--inline"
                               text="£"/>
 
@@ -91,8 +98,10 @@ class ReOpenNegotiations extends Component {
                 </span>
 
                 <div>
+
                     <Button className="reopen-negotiations__add-comments btn btn--purple"
                             text="add comments"/>
+
                 </div>
 
             </section>

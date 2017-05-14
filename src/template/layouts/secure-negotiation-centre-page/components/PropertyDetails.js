@@ -18,7 +18,9 @@ class PropertyDetails extends Component {
         // Hard code here temporary
         this.state = {
             headerText: 'The property',
-            propertyText: 'Eddington House, 16 Wigginton Road, Tamworth, B79 8PB'
+            propertyText: 'Eddington House, 16 Wigginton Road, Tamworth, B79 8PB',
+            price: '£189,950'
+
         };
     }
 
@@ -30,22 +32,25 @@ class PropertyDetails extends Component {
                         text={this.state.headerText}/>
 
                 <div className="row">
-                    <div className="col-sm-8 col-xs-12">
+
+                    <div className="col-sm-8">
 
                         <Image className="property-details__image layout--inline"
-                               url={PropertyImageURL}/>
+                               url={PropertyImageURL}
+                               alt={this.state.propertyText}/>
 
                         <Title className="property-details__address typography--purple layout--inline"
                                text={this.state.propertyText}/>
 
                     </div>
-                    <div className="property-details__info col-sm-4 col-xs-12">
+
+                    <div className="property-details__info col-sm-4">
 
                         <Copy className="typography--gray-dark typography--copy-md typography--x-light"
                               text="Asking rice:"/>
 
                         <Title className="property-details__price typography--purple layout--full-width"
-                              text="£189,950"/>
+                              text={this.state.price}/>
 
                         <Button className="btn btn--gray"
                                 text="view extras included"/>

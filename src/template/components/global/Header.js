@@ -1,12 +1,16 @@
 /**
  * Created by Amir on 8/5/17.
  */
-import React from 'react';
+
+/*
+ * Import packages, components and assets
+ * */
+import React from 'react'
 import Image from '../common/assets/Image';
-import Header from '../common/typography/Header-1';
+import Title from '../common/typography/Header-1';
 import Logo from '../../../assets/images/logo.jpg';
 
-const NavBar = () => {
+const Header = () => {
     return (
         <header className="navbar navbar-default">
             <div className="container">
@@ -23,7 +27,7 @@ const NavBar = () => {
 
                         <div className="col-sm-6">
 
-                            <Header className="navbar-title typography--purple"
+                            <Title className="navbar-title typography--purple"
                                     text="Secure negotiation centre"/>
 
                         </div>
@@ -35,4 +39,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default Header;

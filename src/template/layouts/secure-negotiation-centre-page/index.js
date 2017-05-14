@@ -2,6 +2,9 @@
  * Created by Amir on 9/5/17.
  */
 
+/*
+ * Import packages and components
+ * */
 import React, { Component } from 'react';
 import StatusBar from './components/StatusBar';
 import PropertyDetails from './components/PropertyDetails';
@@ -13,7 +16,7 @@ import ReOpenNegotiations from './components/ReOpenNegotiations';
 class SecureNegotiationCenterPage extends Component {
     render() {
         return (
-            <div>
+            <main className="container">
 
                 <StatusBar/>
 
@@ -23,13 +26,13 @@ class SecureNegotiationCenterPage extends Component {
 
                 <div className="row">
 
-                    <div className="col-sm-6 col-xs-12">
+                    <div className="col-sm-6">
 
                         <BuyerOffer/>
 
                     </div>
 
-                    <div className="col-sm-6 col-xs-12">
+                    <div className="col-sm-6">
 
                         <YourResponse/>
 
@@ -39,7 +42,7 @@ class SecureNegotiationCenterPage extends Component {
 
                 <ReOpenNegotiations/>
 
-            </div>
+            </main>
         );
     }
 }

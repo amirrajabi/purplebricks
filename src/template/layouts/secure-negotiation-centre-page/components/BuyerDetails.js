@@ -2,11 +2,13 @@
  * Created by Amir on 9/5/17.
  */
 
+/*
+ * Import packages and components
+ * */
 import React, {Component} from 'react';
 import {Collapse} from 'react-bootstrap';
-
 import Header from '../../../components/global/BoxHeader';
-import Body from '../../../components/common/typography/Body';
+import Copy from '../../../components/common/typography/Body';
 
 class BuyerDetails extends Component {
 
@@ -33,6 +35,7 @@ class BuyerDetails extends Component {
 
                 <Header className="typography--purple"
                         text={this.state.headerText}/>
+
                 <div>
 
                     <button className="buyer-details__collapse-btn"
@@ -42,36 +45,38 @@ class BuyerDetails extends Component {
                     </button>
 
                     <Collapse in={this.state.open}>
+
                         <ul>
                             <li className="buyer-details--item">
-                                <Body
+                                <Copy
                                     className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
                                     text="Name:"/>
-                                <Body className="buyer-details__info typography--black-light layout--inline"
+                                <Copy className="buyer-details__info typography--black-light layout--inline"
                                       text={this.state.buyerDetails.name}/>
                             </li>
                             <li className="buyer-details--item">
-                                <Body
+                                <Copy
                                     className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
                                     text="Buying position:"/>
-                                <Body className="buyer-details__info typography--black-light layout--inline"
+                                <Copy className="buyer-details__info typography--black-light layout--inline"
                                       text={this.state.buyerDetails.buyingPosition}/>
                             </li>
                             <li className="buyer-details--item">
-                                <Body
+                                <Copy
                                     className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
                                     text="Financial position:"/>
-                                <Body className="buyer-details__info typography--black-light layout--inline"
+                                <Copy className="buyer-details__info typography--black-light layout--inline"
                                       text={this.state.buyerDetails.financialPosition}/>
                             </li>
                             <li className="buyer-details--item">
-                                <Body
+                                <Copy
                                     className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
                                     text="Timescale:"/>
-                                <Body className="buyer-details__info typography--black-light layout--inline"
+                                <Copy className="buyer-details__info typography--black-light layout--inline"
                                       text={this.state.buyerDetails.timescale}/>
                             </li>
                         </ul>
+
                     </Collapse>
 
                 </div>

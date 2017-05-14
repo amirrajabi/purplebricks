@@ -2,6 +2,9 @@
  * Created by Amir on 9/5/17.
  */
 
+/*
+ * Import packages and components
+ * */
 import React, {Component} from 'react';
 import Header from '../../../components/global/BoxHeader';
 import Body from '../../../components/common/typography/Body';
@@ -15,7 +18,10 @@ class BuyerDetails extends Component {
         // Hard code here temporary
         this.state = {
             headerText: 'Buyer’s offer',
-            propertyText: 'Propert infoPropert infoPropert info'
+            propertyText: 'Propert infoPropert infoPropert info',
+            price: '£179,000',
+            date: '24/10/2013',
+            time: '20:17'
         };
     }
 
@@ -27,7 +33,7 @@ class BuyerDetails extends Component {
                         text={this.state.headerText}/>
                 
                 <Body className="buyer-offer__price"
-                      text="£179,000"/>
+                      text={this.state.price}/>
 
                 <Body className="buyer-offer__description"
                       text="Subject to offer qualification by Purplebricks"/>
@@ -36,10 +42,10 @@ class BuyerDetails extends Component {
                         text="view comments"/>
 
                 <Body className="buyer-offer__date layout--inline typography--purple"
-                      text="Date: 24/10/2013"/>
+                      text={`Date: ${this.state.date}`} />
 
                 <Body className="buyer-offer__date layout--inline typography--purple"
-                      text="Time: 20.17"/>
+                      text={`Time: ${this.state.time}`}/>
 
             </section>
         );

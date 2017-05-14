@@ -2,7 +2,9 @@
  * Created by Amir on 9/5/17.
  */
 
-
+/*
+ * Import packages and components
+ * */
 import React, {Component} from 'react';
 import Header from '../../../components/global/BoxHeader';
 import Body from '../../../components/common/typography/Body';
@@ -16,7 +18,9 @@ class YourResponse extends Component {
         // Hard code here temporary
         this.state = {
             headerText: 'Your response',
-            propertyText: 'Propert infoPropert infoPropert info'
+            propertyText: 'Propert infoPropert infoPropert info',
+            date: '24/10/2013',
+            time: '20:17'
         };
     }
 
@@ -33,11 +37,11 @@ class YourResponse extends Component {
                 <Button className="btn btn--gray your-response__view-btn layout--inline"
                         text="view comments"/>
 
-                <Body className="your-response__date layout--inline typography--purple"
-                      text="Date: 24/10/2013"/>
+                <Body className="buyer-offer__date layout--inline typography--purple"
+                      text={`Date: ${this.state.date}`} />
 
-                <Body className="your-response__date layout--inline typography--purple"
-                      text="Time: 21.05"/>
+                <Body className="buyer-offer__date layout--inline typography--purple"
+                      text={`Time: ${this.state.time}`}/>
 
             </section>
         );
