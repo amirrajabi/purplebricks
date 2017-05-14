@@ -2,6 +2,12 @@ $component: "buyer-details";
 
 .#{$component} {
 
+  position: relative;
+
+  ul{
+    margin-bottom: 0;
+  }
+
   &--item{
     margin-bottom: config('gutter') * 0.5;
   }
@@ -20,6 +26,16 @@ $component: "buyer-details";
 
   &__info{
 
+  }
+
+  &__collapse-btn{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: config('color', 'purple-light');
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
   }
 
 }

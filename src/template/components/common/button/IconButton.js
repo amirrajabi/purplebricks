@@ -6,7 +6,8 @@ import React, {PropTypes} from 'react';
 
 const IconButton = ({className, text}) => {
     return (
-        <button type="button"
+        <button tonClick={ () => this.setState({open: !this.state.open})}
+                ype="button"
                 className={className}>
             {text}
         </button>

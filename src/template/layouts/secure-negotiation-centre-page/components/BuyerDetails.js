@@ -3,8 +3,11 @@
  */
 
 import React, {Component} from 'react';
+import {Collapse} from 'react-bootstrap';
+
 import Header from '../../../components/global/BoxHeader';
 import Body from '../../../components/common/typography/Body';
+import IconButton from '../../../components/common/button/IconButton';
 
 class BuyerDetails extends Component {
 
@@ -13,6 +16,7 @@ class BuyerDetails extends Component {
         // data should come from API call
         // Hard code here temporary
         this.state = {
+            open: true,
             headerText: 'Buyer’s details',
             buyerDetails: {
                 name: 'Mr David Shepherd',
@@ -21,7 +25,12 @@ class BuyerDetails extends Component {
                 timescale: 'Would like to move in 10 weeks - no chain'
             }
         };
+
     }
+
+    changeButtonText = () => {
+        console.log('test');
+    };
 
     render() {
         return (
@@ -29,34 +38,47 @@ class BuyerDetails extends Component {
 
                 <Header className="typography--purple"
                         text={this.state.headerText}/>
+                <div>
 
-                <ul>
-                    <li className="buyer-details--item">
-                        <Body className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
-                              text="Name:"/>
-                        <Body className="buyer-details__info typography--black-light layout--inline"
-                              text={this.state.buyerDetails.name}/>
-                    </li>
-                    <li className="buyer-details--item">
-                        <Body className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
-                              text="Buying position:"/>
-                        <Body className="buyer-details__info typography--black-light layout--inline"
-                              text={this.state.buyerDetails.buyingPosition}/>
-                    </li>
-                    <li className="buyer-details--item">
-                        <Body className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
-                              text="Financial position:"/>
-                        <Body className="buyer-details__info typography--black-light layout--inline"
-                              text={this.state.buyerDetails.financialPosition}/>
-                    </li>
-                    <li className="buyer-details--item">
-                        <Body className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
-                              text="Timescale:"/>
-                        <Body className="buyer-details__info typography--black-light layout--inline"
-                              text={this.state.buyerDetails.timescale}/>
-                    </li>
-                </ul>
+                    <button className="buyer-details__collapse-btn"
+                            onClick={ () => this.setState({open: !this.state.open})}>
+                        hide <i className="icon-up-open"></i>
+                    </button>
 
+                    <Collapse in={this.state.open} onExit={this.changeButtonText()}>
+                        <ul>
+                            <li className="buyer-details--item">
+                                <Body
+                                    className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
+                                    text="Name:"/>
+                                <Body className="buyer-details__info typography--black-light layout--inline"
+                                      text={this.state.buyerDetails.name}/>
+                            </li>
+                            <li className="buyer-details--item">
+                                <Body
+                                    className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
+                                    text="Buying position:"/>
+                                <Body className="buyer-details__info typography--black-light layout--inline"
+                                      text={this.state.buyerDetails.buyingPosition}/>
+                            </li>
+                            <li className="buyer-details--item">
+                                <Body
+                                    className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
+                                    text="Financial position:"/>
+                                <Body className="buyer-details__info typography--black-light layout--inline"
+                                      text={this.state.buyerDetails.financialPosition}/>
+                            </li>
+                            <li className="buyer-details--item">
+                                <Body
+                                    className="buyer-details__label typography--purple layout--inline buyer-details--label-width"
+                                    text="Timescale:"/>
+                                <Body className="buyer-details__info typography--black-light layout--inline"
+                                      text={this.state.buyerDetails.timescale}/>
+                            </li>
+                        </ul>
+                    </Collapse>
+
+                </div>
             </section>
         );
     }

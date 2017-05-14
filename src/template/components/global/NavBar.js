@@ -8,7 +8,7 @@ import Logo from '../../../assets/images/logo.jpg';
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-default">
+        <header className="navbar navbar-default">
             <div className="container">
                 <div className="navbar-header">
                     <div className="row">
@@ -31,7 +31,7 @@ const NavBar = () => {
                     </div>
                 </div>
             </div>
-        </nav>
+        </header>
     );
 };
 
