@@ -28,13 +28,17 @@ $component: "buyer-details";
     border: none;
     position: absolute;
     top: config('gutter') * 1.5;
-    right: config('gutter') * 2;
+    right: config('gutter') * 0.25;
     color: config('color', 'purple-light');
     background-color: transparent;
     text-transform: uppercase;
 
     i{
       margin-left: config('gutter') * 0.25;
+    }
+
+    @include breakpoint('tablet') {
+      right: config('gutter') * 1.5;
     }
   }
 

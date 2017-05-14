@@ -12,7 +12,7 @@ $component: "header";
     background-color: config('color', 'gray');
   }
 
-  &-header {
+  &-container {
     padding: config('gutter') * 0.7 0;
     width: config('width', 'full');
   }
