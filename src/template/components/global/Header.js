@@ -12,12 +12,12 @@ import Logo from '../../../assets/images/logo.jpg';
 
 const Header = () => {
     return (
-        <header className="navbar navbar-default">
+        <header className="header header-default">
             <div className="container">
                 <div className="navbar-header">
                     <div className="row">
 
-                        <div className="navbar-logo col-sm-6">
+                        <div className="header-logo col-sm-6">
 
                             <Image className=""
                                    url={Logo}
@@ -27,7 +27,7 @@ const Header = () => {
 
                         <div className="col-sm-6">
 
-                            <Title className="navbar-title typography--purple"
+                            <Title className="header-title typography--purple"
                                     text="Secure negotiation centre"/>
 
                         </div>

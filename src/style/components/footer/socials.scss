@@ -1,0 +1,25 @@
+$copy: "socials";
+
+.#{$copy} {
+  float: none !important;
+  text-align: center;
+  margin-bottom: config('gutter') * 1.5;
+
+  &__item{
+    padding: 0 config('gutter') * 0.25;
+  }
+
+  &__link{
+    color: config('color', 'gray-light');
+    transition: color 0.5s;
+
+    &:hover{
+      color: config('color', 'gray');
+    }
+  }
+
+  @include breakpoint('tablet') {
+    float: right !important;
+    margin-bottom: 0;
+  }
+}

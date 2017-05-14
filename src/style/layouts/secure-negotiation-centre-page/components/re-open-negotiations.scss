@@ -54,7 +54,7 @@ $component: "reopen-negotiations";
   }
 
   &__input-submit{
-    width: 100%;
+    width: config('width', 'full');
 
     @include breakpoint('tablet') {
       width: calc(100% - 196px);
@@ -62,7 +62,7 @@ $component: "reopen-negotiations";
   }
 
   &__submit-btn{
-    width: 100%;
+    width: config('width', 'full');
     margin-left: 0;
 
     @include breakpoint('tablet') {
@@ -86,6 +86,11 @@ $component: "reopen-negotiations";
 
   &__error-message{
     color: config('color', 'red');
+    padding-left: 0;
+
+    @include breakpoint('tablet') {
+      padding-left: config('gutter') * 1.5;
+    }
   }
 
 }

@@ -3,7 +3,7 @@ $component: 'your-response';
 .#{$component} {
 
   .box-header{
-    margin-bottom: 15px;
+    margin-bottom: config('gutter') * .75;
   }
 
   &__price{
@@ -12,11 +12,11 @@ $component: 'your-response';
   }
 
   &__description{
-    font-size: 22px;
-    font-weight: 500;
-    max-width: 245px;
-    line-height: 27px;
-    margin-bottom: 14px;
+    font-size: config('size', 'body-lg');
+    font-weight: config('weight', 'semiBold') - 100;
+    max-width: config('gutter-large') * 2.45;
+    line-height: config('gutter') * 1.35;
+    margin-bottom: config('gutter') * .7;
   }
 
   &__date{

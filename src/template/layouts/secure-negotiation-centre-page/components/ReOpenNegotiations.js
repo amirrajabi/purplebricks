@@ -93,7 +93,7 @@ class ReOpenNegotiations extends Component {
                            value="submit offer"/>
                 </form>
 
-                <span className="reopen-negotiations__error-message layout--l-s-g">
+                <span className="reopen-negotiations__error-message">
                     {!this.state.offerValue !== '' ? this.state.errorMessage : ''}
                 </span>
 

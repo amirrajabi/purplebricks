@@ -4,7 +4,6 @@
 /*
   Global layouts style
 */
-
 $component: "layout";
 
 .#{$component} {
@@ -27,7 +26,7 @@ $component: "layout";
   }
 
   &--full-width{
-    width: 100%;
+    width: config('width', 'full');
   }
 
   &--list-reset{

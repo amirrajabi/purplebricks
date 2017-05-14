@@ -24,17 +24,13 @@ $component: "buyer-details";
     }
   }
 
-  &__info{
-
-  }
-
   &__collapse-btn{
+    border: none;
     position: absolute;
-    top: 30px;
-    right: 40px;
+    top: config('gutter') * 1.5;
+    right: config('gutter') * 2;
     color: config('color', 'purple-light');
     background-color: transparent;
-    border: none;
     text-transform: uppercase;
 
     i{
