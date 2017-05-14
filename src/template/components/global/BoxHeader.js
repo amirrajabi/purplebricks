@@ -2,7 +2,8 @@
  * Created by Amir on 10/5/17.
  */
 
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Title from '../common/typography/Header-1';
 
 const BoxHeader = ({className, text}) => {

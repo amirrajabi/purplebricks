@@ -26,7 +26,7 @@ class ReOpenNegotiations extends Component {
     submitOffer(event) {
         event.preventDefault();
         if (this.state.offerValue !== '') {
-            console.log(`Offer is: ${this.state.offerValue}`);
+            console.log(`Offer is: £${this.state.offerValue}`);
             this.setState({errorMessage: ''});
         } else {
             this.setState({errorMessage: 'Please fill in this field.'});
@@ -60,7 +60,7 @@ class ReOpenNegotiations extends Component {
                             text="negotiate for me"/>
                 </div>
 
-                <label className="reopen-negotiations__title-submit typography--purple typography--bold"
+                <label className="reopen-negotiations__title-submit typography--h3 typography--purple typography--bold"
                        htmlFor="inputOffer">
                     Enter an offer you would be willing to accept:
                 </label>
