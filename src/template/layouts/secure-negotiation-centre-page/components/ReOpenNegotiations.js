@@ -14,8 +14,11 @@ class ReOpenNegotiations extends Component {
         super(props);
         this.state = {
             negotiateText: 'Would you like your Expert, Robert White, to negotiate on your behalf? It’s completely free!',
-            offerValue: '',
-            errorMessage: ''
+            offerValue: {
+                price: ''
+            },
+            errorMessage: '',
+
         };
 
         this.updateInputValue = this.updateInputValue.bind(this);
@@ -24,8 +27,8 @@ class ReOpenNegotiations extends Component {
 
     submitOffer(event) {
         event.preventDefault();
-        if (this.state.offerValue !== '') {
-            console.log(`Offer is: £${this.state.offerValue}`);
+        if (this.state.offerValue.price !== '') {
+            console.log(`Offer is: ${JSON.stringify(this.state.offerValue)}`);
             this.setState({errorMessage: ''});
         } else {
             this.setState({errorMessage: 'Please fill in this field.'});
@@ -34,7 +37,7 @@ class ReOpenNegotiations extends Component {
 
     updateInputValue(offer) {
         offer.preventDefault();
-        this.setState({offerValue: offer.target.value});
+        this.setState({offerValue: {price: offer.target.value}});
 
         if (!offer.target.value) {
             this.setState({errorMessage: 'Your offer must be a number.'});
@@ -80,7 +83,7 @@ class ReOpenNegotiations extends Component {
                                id="inputOffer"
                                type="number"
                                thousandSeparator={true}
-                               value={this.state.offerValue}
+                               value={this.state.offerValue.price}
                                onChange={this.updateInputValue}
                                maxLength={15}
                                required
@@ -94,7 +97,7 @@ class ReOpenNegotiations extends Component {
                 </form>
 
                 <span className="reopen-negotiations__error-message">
-                    {!this.state.offerValue !== '' ? this.state.errorMessage : ''}
+                    {!this.state.offerValue.price !== '' ? this.state.errorMessage : ''}
                 </span>
 
                 <div>
