@@ -7,7 +7,6 @@ import {Collapse} from 'react-bootstrap';
 
 import Header from '../../../components/global/BoxHeader';
 import Body from '../../../components/common/typography/Body';
-import IconButton from '../../../components/common/button/IconButton';
 
 class BuyerDetails extends Component {
 
@@ -28,10 +27,6 @@ class BuyerDetails extends Component {
 
     }
 
-    changeButtonText = () => {
-        console.log('test');
-    };
-
     render() {
         return (
             <section className="buyer-details box--large box--gray">
@@ -42,10 +37,11 @@ class BuyerDetails extends Component {
 
                     <button className="buyer-details__collapse-btn"
                             onClick={ () => this.setState({open: !this.state.open})}>
-                        hide <i className="icon-up-open"></i>
+                        {!this.state.open ? 'show' : 'hide'}
+                        <i className={!this.state.open ? 'icon-down-open' : 'icon-up-open'}></i>
                     </button>
 
-                    <Collapse in={this.state.open} onExit={this.changeButtonText()}>
+                    <Collapse in={this.state.open}>
                         <ul>
                             <li className="buyer-details--item">
                                 <Body

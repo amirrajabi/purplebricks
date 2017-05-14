@@ -36,6 +36,10 @@ $component: "buyer-details";
     background-color: transparent;
     border: none;
     text-transform: uppercase;
+
+    i{
+      margin-left: config('gutter') * 0.25;
+    }
   }
 
 }

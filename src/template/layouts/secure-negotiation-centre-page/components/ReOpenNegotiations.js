@@ -7,7 +7,6 @@ import Header from '../../../components/global/BoxHeader';
 import Body from '../../../components/common/typography/Body';
 import Title from '../../../components/common/typography/Header-3';
 import Button from '../../../components/common/button/TextButton';
-import InputText from '../../../components/common/form/InputText';
 
 class ReOpenNegotiations extends Component {
 
@@ -15,7 +14,20 @@ class ReOpenNegotiations extends Component {
         super(props);
         this.state = {
             negotiateText: 'Would you like your Expert, Robert White, to negotiate on your behalf? It’s completely free!',
+            offerValue: ''
         };
+
+        this.updateInputValue = this.updateInputValue.bind(this);
+        this.submitOffer = this.submitOffer.bind(this);
+    }
+
+    submitOffer(event) {
+        event.preventDefault();
+        console.log(`Offer is: ${this.state.offerValue}`);
+    }
+
+    updateInputValue(event) {
+        this.setState({offerValue: event.target.value});
     }
 
     render() {
@@ -36,17 +48,21 @@ class ReOpenNegotiations extends Component {
 
                 <Title className="reopen-negotiations__title-submit typography--purple typography--bold"
                        text="Enter an offer you would be willing to accept:"/>
-                <div>
+                <form onSubmit={this.submitOffer}>
                     <div className="reopen-negotiations__input-submit layout--inline">
                         <Body className="reopen-negotiations__currency typography--gray-dark layout--inline"
                               text="£"/>
 
-                        <InputText className="reopen-negotiations__input-offer layout--inline"/>
+                        <input className="reopen-negotiations__input-offer layout--inline"
+                               type="text"
+                               value={this.state.offerValue}
+                               onChange={this.updateInputValue} />
                     </div>
 
-                    <Button className="reopen-negotiations__submit-btn btn btn--blue layout--inline"
-                            text="submit offer"/>
-                </div>
+                    <input className="reopen-negotiations__submit-btn btn btn--blue layout--inline"
+                           type="submit"
+                           value="submit offer" />
+                </form>
 
                 <div className="">
                     <Button className="reopen-negotiations__add-comments btn btn--purple"
