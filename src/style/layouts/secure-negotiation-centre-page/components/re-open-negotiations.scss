@@ -84,4 +84,8 @@ $component: "reopen-negotiations";
     }
   }
 
+  &__error-message{
+    color: config('color', 'red');
+  }
+
 }

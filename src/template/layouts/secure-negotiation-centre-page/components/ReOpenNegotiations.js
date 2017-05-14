@@ -5,8 +5,9 @@
 import React, {Component} from 'react';
 import Header from '../../../components/global/BoxHeader';
 import Body from '../../../components/common/typography/Body';
-import Title from '../../../components/common/typography/Header-3';
+// import Title from '../../../components/common/typography/Header-3';
 import Button from '../../../components/common/button/TextButton';
+import Input from 'react-number-format';
 
 class ReOpenNegotiations extends Component {
 
@@ -14,7 +15,8 @@ class ReOpenNegotiations extends Component {
         super(props);
         this.state = {
             negotiateText: 'Would you like your Expert, Robert White, to negotiate on your behalf? It’s completely free!',
-            offerValue: ''
+            offerValue: '',
+            errorMessage: ''
         };
 
         this.updateInputValue = this.updateInputValue.bind(this);
@@ -23,11 +25,23 @@ class ReOpenNegotiations extends Component {
 
     submitOffer(event) {
         event.preventDefault();
-        console.log(`Offer is: ${this.state.offerValue}`);
+        if (this.state.offerValue !== '') {
+            console.log(`Offer is: ${this.state.offerValue}`);
+            this.setState({errorMessage: ''});
+        } else {
+            this.setState({errorMessage: 'Please fill in this field.'});
+        }
     }
 
-    updateInputValue(event) {
-        this.setState({offerValue: event.target.value});
+    updateInputValue(offer) {
+        offer.preventDefault();
+        this.setState({offerValue: offer.target.value});
+
+        if (!offer.target.value) {
+            this.setState({errorMessage: 'Your offer must be a Number.'});
+        } else {
+            this.setState({errorMessage: ''});
+        }
     }
 
     render() {
@@ -46,25 +60,37 @@ class ReOpenNegotiations extends Component {
                             text="negotiate for me"/>
                 </div>
 
-                <Title className="reopen-negotiations__title-submit typography--purple typography--bold"
-                       text="Enter an offer you would be willing to accept:"/>
-                <form onSubmit={this.submitOffer}>
+                <label className="reopen-negotiations__title-submit typography--purple typography--bold"
+                       htmlFor="inputOffer">
+                    Enter an offer you would be willing to accept:
+                </label>
+                <form onSubmit={this.submitOffer} noValidate>
                     <div className="reopen-negotiations__input-submit layout--inline">
                         <Body className="reopen-negotiations__currency typography--gray-dark layout--inline"
                               text="£"/>
 
-                        <input className="reopen-negotiations__input-offer layout--inline"
-                               type="text"
+                        <Input className="reopen-negotiations__input-offer layout--inline"
+                               id="inputOffer"
+                               type="number"
+                               thousandSeparator={true}
                                value={this.state.offerValue}
-                               onChange={this.updateInputValue} />
+                               onChange={this.updateInputValue}
+                               maxLength={15}
+                               required
+                               aria-required="true"/>
+
                     </div>
 
                     <input className="reopen-negotiations__submit-btn btn btn--blue layout--inline"
                            type="submit"
-                           value="submit offer" />
+                           value="submit offer"/>
                 </form>
 
-                <div className="">
+                <span className="reopen-negotiations__error-message layout--l-s-g">
+                    {!this.state.offerValue !== '' ? this.state.errorMessage : ''}
+                </span>
+
+                <div>
                     <Button className="reopen-negotiations__add-comments btn btn--purple"
                             text="add comments"/>
                 </div>
