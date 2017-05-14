@@ -1,6 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 
+### `Description`
+
+1. Use HTML5, CSS3/SASS, Bootstrap and ReactJS
+2. Root file is index.html and all section call in main as a components
+3. Use react-bootstrap for handling collapse/expand 'Buyer's Detail' component
+4. Offer Input has a currency validation and inline error text
+5. Submit send an offer as a object to console
+6. All responsive and mobile first
+7. Test in Chrome, firefox but no access to IE9(check styles in CanIUse, 'Should be right in IE9')
+8. Step by Step commit to GitHub
+9. 100% Pixel perfect
+10. Use semantic tags and Accessibility
+11. Use Webpack
+
+
 ## Available Scripts
 
 In the project directory, you can run:
