@@ -37,14 +37,14 @@ $component: "reopen-negotiations";
   }
 
   &__input-offer{
-    height: config('gutter') * 1.5;
+    height: config('gutter') * 2.25;
     width: calc(100% - 30px);
     border: 1px solid config('color', 'gray-dark');
     border-radius: config('gutter') * 0.2;
     font-weight: config('weight', 'semiBold');
     font-family: config('family', 'copy');
     font-size: config('size', 'heading-1') * 0.93;
-    padding:  config('gutter') config('gutter') * 0.25;
+    padding:  config('gutter') * 0.5 config('gutter') * 0.25;
     margin: config('gutter') * 0.5 0;
     margin-left: config('gutter') * 0.35;
 
